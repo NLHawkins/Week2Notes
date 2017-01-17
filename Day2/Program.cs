@@ -13,6 +13,24 @@ namespace Day2
     {
         static void Main(string[] args)
         {
+            //dogstuff();
+            Warrior barton = new Warrior("barton");
+            Warrior griff = new Warrior("griff");
+
+            griff.Attack(barton);
+            barton.Attack(griff);
+            griff.Attack(barton);
+            griff.Attack(barton);
+            griff.Attack(barton);
+
+
+
+            Console.WriteLine(barton);
+            Console.WriteLine(griff);
+        }
+
+        private static void dogstuff()
+        {
             var maysie = new Dog("Maysie");
             maysie.HappyBirthday();
             maysie.HappyBirthday();
@@ -38,7 +56,6 @@ namespace Day2
             maysie.GetDogFriends();
             maysie.RemoveFriend(Gus);
             maysie.GetDogFriends();
-
         }
     }
 }
