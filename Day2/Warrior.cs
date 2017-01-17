@@ -12,7 +12,7 @@ namespace Day2
     }
     class Warrior
     {
-
+        //CLASS MEMBERS below. Are available to all methods within class Warrior
         private int hp;
         public string name;
         public State currentState = State.Alive;

@@ -16,13 +16,18 @@ namespace Day2
             //dogstuff();
             Warrior barton = new Warrior("barton");
             Warrior griff = new Warrior("griff");
-
+            
+            while(barton.currentState == State.Alive)
+            {
+                griff.Attack(barton);
+            }
+            /*
             griff.Attack(barton);
             barton.Attack(griff);
             griff.Attack(barton);
             griff.Attack(barton);
             griff.Attack(barton);
-
+            */
 
 
             Console.WriteLine(barton);
