@@ -8,39 +8,7 @@ namespace Day2
 {
 
     //class definition
-    class Dog
-    {
-        //setting to public makes class accessible, but changeable!
-        //setting to private makes the definition not accesible to any other class outside this method
-        private int Age;
-        public string name;
-
-        
-
-        //Constructor
-        public Dog(string _name)
-        {
-            Age = 0;
-            name = _name;
-        }
-
-        public void HappyBirthday()
-        {
-            Age++;
-        }
-
-        //exposing private variable through public accessor
-        public int GetAge()
-        {
-            return Age;
-        }
-
-        public int GetAgeDogYears()
-        {
-            return Age * 7;
-        }
-    }
-
+    
     class Program
     {
         static void Main(string[] args)
@@ -54,6 +22,23 @@ namespace Day2
             var ageDogYears = maysie.GetAgeDogYears();
             Console.WriteLine(age);
             Console.WriteLine(ageDogYears);
+            //Console.WriteLine(maysie.name);
+
+            var Scout = new Dog("Scout");
+            Scout.HappyBirthday();
+            var Damon = new Dog("Damon");
+            var Gus = new Dog("Gus");
+
+            //Console.WriteLine(maysie);
+            maysie.AddFriend(Scout);
+            maysie.AddFriend(Damon);
+            maysie.AddFriend(Gus);
+            maysie.AddFriend(Damon);
+
+            maysie.GetDogFriends();
+            maysie.RemoveFriend(Gus);
+            maysie.GetDogFriends();
+
         }
     }
 }
