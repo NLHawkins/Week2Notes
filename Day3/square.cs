@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day3
 {
-    class square : shape
+    public class square : shape
     {
         public square(double _height, double _width) : base(_height, _width)
         {

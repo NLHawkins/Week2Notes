@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Day3
 {
-    class circle : shape
+    public class circle : shape
     {
+        //property since can be derived from method radius
+        public double diameter
+        {
+            get
+            {
+                return 2 * radius;
+            }
+        }
         public circle(double _radius) : base(_radius)
         {
         }
 
         public override double Area()
         {
-            return Math.Pow((double)Math.PI * radius, 2);
+            return Math.Pow(radius, 2) * Math.PI;
         }
     }
 }
